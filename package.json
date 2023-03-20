@@ -7,11 +7,15 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "netlify": "netlify"
   },
   "dependencies": {
     "@astrojs/netlify": "^2.2.0",
     "astro": "^2.1.0",
     "microcms-js-sdk": "^2.3.2"
+  },
+  "devDependencies": {
+    "netlify-cli": "^13.1.6"
   }
 }

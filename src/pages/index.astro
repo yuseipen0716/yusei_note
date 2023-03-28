@@ -1,15 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
 
 // microCMS呼び出し
 import { getBlogs } from '../library/microcms';
 const { contents: posts } = await getBlogs({ fields: ["id", "title", "publishedAt"] });
+const title = 'Yusei Note'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Yusei Note">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<Header title={title} />
 		<ul>
 			{
 				posts.map((post) => (

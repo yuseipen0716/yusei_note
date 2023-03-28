@@ -6,12 +6,16 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<h1>{title}</h1>
+<h1><a href="/">{title}</a></h1>
 
 <style>
   h1 {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 2rem;
+  }
+  a {
+    text-decoration: none;
+    color: #333
   }
 </style>

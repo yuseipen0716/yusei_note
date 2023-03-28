@@ -17,7 +17,7 @@ const { contents: posts } = await getBlogs({ fields: ["id", "title", "publishedA
 						<time datetime={post.publishedAt}>
 							{new Date(post.publishedAt).toLocaleDateString('ja-JP')}
 						</time>
-						<a href={post.id}>{post.title}</a>
+						<a href={`articles/${post.id}`}>{post.title}</a>
 					</li>
 				))
 			}

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 // microCMS呼び出し
 import { getBlogs } from '../library/microcms';
@@ -9,8 +10,8 @@ const title = 'Yusei Note'
 ---
 
 <Layout title="Yusei Note">
+	<Header title={title} />
 	<main>
-		<Header title={title} />
 		<ul>
 			{
 				posts.map((post) => (
@@ -24,6 +25,7 @@ const title = 'Yusei Note'
 			}
 		</ul>
 	</main>
+	<Footer/>
 </Layout>
 
 <style>

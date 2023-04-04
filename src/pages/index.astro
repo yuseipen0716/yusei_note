@@ -6,10 +6,10 @@ import Footer from '../components/Footer.astro';
 // microCMS呼び出し
 import { getBlogs } from '../library/microcms';
 const { contents: posts } = await getBlogs({ fields: ["id", "title", "publishedAt"] });
-const title = 'Yusei Note'
+const title = 'Deep in Deep'
 ---
 
-<Layout title="Yusei Note">
+<Layout title="Deep in Deep">
 	<Header title={title} />
 	<main>
 		<ul>

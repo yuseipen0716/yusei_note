@@ -1,7 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getBlogs, getBlogDetail } from "../../library/microcms";
-import { marked } from "marked"
+import { marked } from "marked";
+// code blockのhighlight
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github-dark.css'
 
 // 詳細記事ページの全パスを取得
 export async function getStaticPaths() {
@@ -19,6 +22,18 @@ const blog = await getBlogDetail(blogId as string);
 
 // microCMSから返されたプレーンテキストをmarkdownにparse
 const html = marked.parse(blog.content, { gfm: true })
+
+// syntax highlightの設定
+const renderer = new marked.Renderer();
+renderer.codespan = (code) => {
+  return `<code class="inline-code" style="background-color: #e2e2e2; padding: 2px">${code}</code>`;
+};
+renderer.code = (code, _) => {
+  return '<pre' + '><code class="hljs">' + hljs.highlightAuto(code).value + '</code></pre>';
+};
+marked.setOptions({
+  renderer: renderer
+});
 ---
 
 <Layout title="My first blog with Astro">

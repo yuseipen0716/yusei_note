@@ -1,0 +1,44 @@
+---
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<button class="backbutton">
+  <a href={href}>
+    戻る
+  </a>
+</button>
+
+<style>
+  button {
+    padding: 0;
+  }
+
+  .backbutton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #da72cc;
+  }
+
+  .backbutton a {
+    width: 100%;
+    padding: .5em 1.5em;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .backbutton:hover {
+      background-color: #ca62bc;
+      opacity: 0.8;
+  }
+</style>

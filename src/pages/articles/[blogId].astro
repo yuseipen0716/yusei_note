@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BackButton from "../../components/shared/BackButton.astro";
 import { getBlogs, getBlogDetail } from "../../library/microcms";
 import { marked } from "marked";
 // code blockのhighlight
@@ -37,6 +38,7 @@ marked.setOptions({
 ---
 
 <Layout title="My first blog with Astro">
+  <BackButton href="/" />
   <main>
     <h1 class="title">{blog.title}</h1>
     <p class="publishedAt">公開日時 : {blog.publishedAt}</p>

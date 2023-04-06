@@ -30,8 +30,8 @@ const html = highlightMarkdown(parsed)
 
 <Layout title="My first blog with Astro">
   <Header title='Deep in Deep' />
-  <BackButton href="/" />
   <main>
+    <BackButton href="/" />
     <h1 class="title">{blog.title}</h1>
     <p class="publishedAt">公開日 : {new Date(blog.publishedAt).toLocaleDateString('ja-JP')}</p>
     <div class="post" set:html={html}></div>
@@ -44,6 +44,6 @@ const html = highlightMarkdown(parsed)
     margin: auto;
     padding: 1em;
     width: 80%;
-    min-height: 66.3vh;
+    min-height: 70.2vh;
   }
 </style>

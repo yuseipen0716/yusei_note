@@ -20,6 +20,7 @@
     "microcms-js-sdk": "^2.3.2"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^1.2.0",
     "netlify-cli": "^13.1.6"
   }
 }

@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@astrojs/partytown": "^1.2.0",
+    "@types/google.analytics": "^0.0.42",
     "netlify-cli": "^13.1.6"
   }
 }

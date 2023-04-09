@@ -2,25 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
 
 // microCMS呼び出し
 import { getBlogs } from '../library/microcms';
-const { contents: posts } = await getBlogs({ fields: ["id", "title", "publishedAt"] });
+const { contents: posts } = await getBlogs({ fields: ["id", "title", "publishedAt", "eyecatch"] });
 const title = 'Deep in Deep'
 ---
 
 <Layout title="Deep in Deep">
 	<Header title={title} />
 	<main>
-		<ul>
+		<ul class="link-card-grid">
 			{
 				posts.map((post) => (
-					<li>
-						<time datetime={post.publishedAt}>
-							{new Date(post.publishedAt).toLocaleDateString('ja-JP')}
-						</time>
-						<a href={`articles/${post.id}`}>{post.title}</a>
-					</li>
+					<Card
+						eyecacthUrl={post.eyecatch.url}
+						href={`articles/${post.id}`}
+						title={post.title}
+						publishedAt={new Date(post.publishedAt).toLocaleDateString('ja-JP')}
+					/>
 				))
 			}
 		</ul>
@@ -32,7 +33,7 @@ const title = 'Deep in Deep'
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 70vw;
 		min-height: 69vh;
 	}
 	h1 {

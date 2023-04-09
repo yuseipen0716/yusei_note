@@ -1,22 +1,29 @@
 ---
 export interface Props {
-	title: string;
-	body: string;
+	eyecacthUrl: string;
 	href: string;
+	title: string;
+	publishedAt: string;
 }
 
-const { href, title, body } = Astro.props;
+const { eyecacthUrl, href, title, publishedAt  } = Astro.props;
 ---
 
 <li class="link-card">
 	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
+		<div class="flex">
+			<div class="eyecacath">
+				<img class="eyecatch-img" src={eyecacthUrl}>
+			</div>
+			<div class="title-area">
+				<h2>
+					{title}
+				</h2>
+				<p>
+					{publishedAt}
+				</p>
+			</div>
+		</div>
 	</a>
 </li>
 <style>
@@ -59,5 +66,15 @@ const { href, title, body } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent));
+	}
+	.eyecatch-img {
+		width: 80px;
+	}
+	.flex {
+		display: flex;
+		align-items: center;
+	}
+	.title-area {
+		margin-left: 1em;
 	}
 </style>

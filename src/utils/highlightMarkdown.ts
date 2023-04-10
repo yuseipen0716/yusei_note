@@ -18,5 +18,10 @@ export function highlightMarkdown(html: string) {
     $(elm).addClass('hljs');
   });
 
+  $('img').each((_, elm) => {
+    $(elm).html();
+    $(elm).attr('style', 'max-width: 80vw;');
+  });
+
   return $.html();
 }

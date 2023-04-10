@@ -23,5 +23,10 @@ export function highlightMarkdown(html: string) {
     $(elm).attr('style', 'max-width: 80vw;');
   });
 
+  $('h2').each((_, elm) => {
+    $(elm).html();
+    $(elm).attr('style', 'margin-top: 1.5em; border-bottom: 2px solid #666; display: inline-block; padding: 0 6px 6px 6px;');
+  });
+
   return $.html();
 }

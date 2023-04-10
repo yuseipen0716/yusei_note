@@ -28,7 +28,7 @@ const parsed = marked.parse(blog.content, { gfm: true })
 const html = highlightMarkdown(parsed)
 ---
 
-<Layout title="My first blog with Astro">
+<Layout title={blog.title}>
   <Header title='Deep in Deep' />
   <main>
     <BackButton href="/" />

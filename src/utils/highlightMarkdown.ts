@@ -25,8 +25,10 @@ export function highlightMarkdown(html: string) {
 
   $('h2').each((_, elm) => {
     $(elm).html();
-    $(elm).attr('style', 'margin-top: 1.5em; border-bottom: 2px solid #666; display: inline-block; padding: 0 6px 6px 6px;');
+    $(elm).attr('style', 'margin-top: 1em; border-bottom: 2px solid #666; display: inline-block; padding: 0 6px 6px 6px;');
   });
+
+  $('body').attr('style', 'line-height: 1.9; letter-spacing: 0.06em;');
 
   return $.html();
 }

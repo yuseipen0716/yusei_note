@@ -26,6 +26,8 @@ const blog = await getBlogDetail(blogId as string);
 // microCMSから返されたプレーンテキストをmarkdownにparse
 const parsed = marked.parse(blog.content, { gfm: true })
 const html = highlightMarkdown(parsed)
+
+const categories = blog.category
 ---
 
 <Layout title={blog.title}>
@@ -33,7 +35,16 @@ const html = highlightMarkdown(parsed)
   <main>
     <BackButton href="/" />
     <h1 class="title">{blog.title}</h1>
-    <p class="publishedAt">公開日 : {new Date(blog.publishedAt).toLocaleDateString('ja-JP')}</p>
+    <div class="info">
+      <div class="category">
+        {categories.map((category) => (
+          <p>{category}</p>
+        ))}
+      </div>
+      <div class="published-at">
+        <p>公開日 : {new Date(blog.publishedAt).toLocaleDateString('ja-JP')}</p>
+      </div>
+    </div>
     <div class="post" set:html={html}></div>
   </main>
   <Footer />
@@ -45,5 +56,22 @@ const html = highlightMarkdown(parsed)
     padding: 1em;
     width: 80%;
     min-height: 70.2vh;
+  }
+  main h1 {
+    border-left: 10px solid green;
+    padding-left: 12px;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .category p {
+    margin-right: 1em;
+    padding: 4px 12px;
+    border-radius: 10px;
+    background-color: #ccc;
+  }
+  .published-at p {
+    padding: 4px 12px;
   }
 </style>

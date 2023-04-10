@@ -19,6 +19,7 @@ export type Blog = {
     height: number;
     width: number;
   };
+  category: string[];
 };
 export type BlogResponse = {
   totalCount: number;

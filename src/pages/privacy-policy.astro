@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BackButton from '../components/shared/BackButton.astro';
+
+const title = 'Deep in Deep'
+---
+
+<Layout title="Deep in Deep">
+	<Header title={title} />
+	<main>
+    <BackButton href="/"/>
+    <h2>プライバシーポリシー</h2>
+    <p>
+      本プライバシーポリシーは「Deep in Deep（ https://yusei-note.netlify.app/ ）」
+      （以下、「当サイト」）の各種情報やサービスにおいて、閲覧者の個人情報またはそれに
+      準ずる情報を取り扱う際に、当サイトが遵守する方針を示したものです。
+    </p>
+
+    <h3>1. 個人情報の利用目的</h3>
+    <p>
+      当サイトでは、お問い合わせフォーム内で、お名前やメールアドレス等の個人情報を入力
+      いただく場合がございます。
+    </p>
+
+    <h3>2. アクセス解析ツールについて</h3>
+    <p>
+      当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しております。
+      アクセスログの収集のためにクッキー（Cookie）を利用しております。アクセスログは匿名で収集
+      されており、個人を特定するものではございません。
+    </p>
+
+    <h3>3. 広告について</h3>
+    <p></p>
+
+    <h3>4. 免責事項</h3>
+    <p>
+      当サイトのリンクやバナー等から他のサイトに移動された場合、移動先のサイトで提供される情報、
+      サービス等について一切の責任を負いません。
+    </p>
+    <p>
+      当サイトのコンテンツにつきましては、正確な情報を発信できるよう努めておりますが、情報が古く
+      なってしまっている場合や、誤った情報が入り込んでいる場合がございます。
+    </p>
+    <p>
+      当サイトで発信している情報に不備がございましたら、お問い合わせフォームよりご連絡ください。
+    </p>
+    <p>
+      当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
+    </p>
+
+    <h3>5. 著作権等について</h3>
+    <p>
+      当サイトは著作権や肖像権の侵害を目的としたものではございません。当サイトに掲載された情報
+      において、著作権や肖像権の問題がございましたら、お問い合わせフォームよりご連絡ください。
+      迅速に対応いたします。
+    </p>
+
+    <h3>6. リンクについて</h3>
+    <p>
+      当サイトは基本的にリンクフリーですので、リンクを行う場合の許可等は不要です。
+    </p>
+    <p>ただし、インラインフレームの仕様や画像の直リンクはご遠慮ください。</p>
+
+    <h3>7. プライバシーポリシーの変更について</h3>
+    <p>当サイトは、個人情報に関して適用される日本の法令を遵守するとともに、
+      本プライバシーポリシーの内容を適宜見直し、その改善に努めます。
+      最新のプライバシーポリシーは常に本ページにて開示されます。
+    </p>
+    <br><br>
+    <p>2023年4月12日策定</p>
+	</main>
+	<Footer/>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 70vw;
+		min-height: 69vh;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+  h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+  h3 {
+    margin-top: 2.5em;
+  }
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

@@ -10,7 +10,7 @@ const { contents: posts } = await getBlogs({ fields: ["id", "title", "publishedA
 const title = 'Deep in Deep'
 ---
 
-<Layout title="Deep in Deep">
+<Layout title={title}>
 	<Header title={title} />
 	<main>
 		<ul class="link-card-grid">

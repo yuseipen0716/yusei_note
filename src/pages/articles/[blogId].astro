@@ -54,8 +54,13 @@ const categories = blog.category
   main {
     margin: auto;
     padding: 1em;
-    width: 80%;
+    width: 60%;
     min-height: 70.2vh;
+  }
+  @media screen and (max-width: 480px) {
+    main {
+      width: 80%;
+    }
   }
   main h1 {
     border-left: 10px solid green;

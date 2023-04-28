@@ -13,7 +13,7 @@ const { eyecacthUrl, href, title, publishedAt  } = Astro.props;
 	<a href={href}>
 		<div class="flex">
 			<div class="eyecacath">
-				<img class="eyecatch-img" src={eyecacthUrl}>
+				<img class="eyecatch-img" src={eyecacthUrl} alt={`記事タイトル[${title}]のアイキャッチ`}>
 			</div>
 			<div class="title-area">
 				<h2>

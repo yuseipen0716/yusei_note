@@ -37,6 +37,12 @@ const { href } = Astro.props;
     text-decoration: none;
   }
 
+  @media screen and (max-width: 480px) {
+    .backbutton a {
+      font-size: 1em;
+    }
+  }
+
   .backbutton:hover {
       background-color: #406583;
       opacity: 0.8;

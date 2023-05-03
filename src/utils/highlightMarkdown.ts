@@ -18,20 +18,5 @@ export function highlightMarkdown(html: string) {
     $(elm).addClass('hljs');
   });
 
-  // 画像のwidthが固定で、SP表示で記事本文のstyleが崩れたので、max-widthを設定
-  $('img').each((_, elm) => {
-    $(elm).html();
-    $(elm).attr('style', 'max-width: 80vw;');
-  });
-
-  // githubのh2っぽく下線を引く。また、section間の余白を少し広げる。
-  $('h2').each((_, elm) => {
-    $(elm).html();
-    $(elm).attr('style', 'margin-top: 1em; border-bottom: 2px solid #bbb; display: inline-block; padding: 0 6px 6px 6px;');
-  });
-
-  // 字が詰まって読みにくいので、その対応
-  $('body').attr('style', 'line-height: 1.9; letter-spacing: 0.06em;');
-
   return $.html();
 }

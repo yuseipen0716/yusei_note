@@ -1,4 +1,27 @@
-# Astro Starter Kit: Basics
+## Astroで作成するブログサイト
+microCMSで作成したコンテンツをAstroで作成したブログサイトで表示する。コンテンツ作成は[こちら](https://yuseipen.microcms.io/apis/blogs)
+
+## Hosting
+[Netlify](https://app.netlify.com/)でホスティング
+
+## 作成したサイト
+[Deep in Deep](https://yusei-note.netlify.app/)
+
+## Command
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `yarn install`          | Installs dependencies                            |
+| `yarn start`          | Starts local dev server at `localhost:3000`      |
+| `yarn run build`        | Build your production site to `./dist/`          |
+| `yarn run preview`      | Preview your build locally, before deploying     |
+| `yarn run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `yarn run astro --help` | Get help using the Astro CLI                     |
+
+## Astro Docs
+https://docs.astro.build/ja/getting-started/
+
+
+<!-- # Astro Starter Kit: Basics
 
 ```
 npm create astro@latest -- --template basics
@@ -54,4 +77,4 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-### デプロイテスト
+### デプロイテスト -->

@@ -18,5 +18,12 @@ export function highlightMarkdown(html: string) {
     $(elm).addClass('hljs');
   });
 
+  // data-filename属性を持つdivタグにファイル名表示用の要素を追加
+  $('div[data-filename]').each(function () {
+    const filename = $(this).data('filename') as unknown as string;
+    const filenameElement = $('<div>').addClass('filename-label').text(filename);
+    $(this).prepend(filenameElement);
+  });
+
   return $.html();
 }

@@ -1,6 +1,8 @@
 ## Astroで作成するブログサイト
 microCMSで作成したコンテンツをAstroで作成したブログサイトで表示する。コンテンツ作成は[こちら](https://yuseipen.microcms.io/apis/blogs)
 
+最近試してみているリッチエディタのドキュメント -> https://document.microcms.io/manual/rich-editor-usage
+
 ## Hosting
 [Netlify](https://app.netlify.com/)でホスティング
 

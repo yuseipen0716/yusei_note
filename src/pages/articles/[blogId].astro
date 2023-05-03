@@ -8,6 +8,7 @@ import { highlightMarkdown } from "../../utils/highlightMarkdown";
 import { marked } from "marked";
 // codeのsyntax highlightのthemeを変えたいときは以下を変更(demo: https://highlightjs.org/static/demo/)
 import 'highlight.js/styles/vs2015.css'
+import '../../styles/blog_page_style.css'
 
 // 詳細記事ページの全パスを取得
 export async function getStaticPaths() {
@@ -23,9 +24,8 @@ export async function getStaticPaths() {
 const { blogId } = Astro.params;
 const blog = await getBlogDetail(blogId as string);
 
-// microCMSから返されたプレーンテキストをmarkdownにparse
-const parsed = marked.parse(blog.content, { gfm: true })
-const html = highlightMarkdown(parsed)
+// microCMSのblogAPIから取得した記事本文にhighlightを当てる
+const html = highlightMarkdown(blog.content)
 
 const categories = blog.category
 ---

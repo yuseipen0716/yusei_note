@@ -1,0 +1,36 @@
+body {
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+h2 {
+  margin-top: 1em;
+  padding: 0 6px 6px 6px;
+  border-bottom: 2px solid #bbb;
+  display: inline-block;
+}
+
+figure {
+  margin: 1.5em 0;
+}
+
+@media screen and (max-width: 480px) {
+  figure img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.filename-label {
+  margin-top: 2em;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #F8F8F8;
+  padding: 4px 8px;
+  border-bottom: 1px solid #E7E7E7;
+  display: block;
+}

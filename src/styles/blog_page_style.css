@@ -24,3 +24,13 @@ figure {
     height: auto;
   }
 }
+
+.filename-label {
+  margin-top: 2em;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #F8F8F8;
+  padding: 4px 8px;
+  border-bottom: 1px solid #E7E7E7;
+  display: block;
+}

@@ -25,9 +25,12 @@ body:
     attributes:
       label: 優先度
       options:
-        - 🔴 高
-        - 🟡 中
-        - 🟢 低
+        - 保留
+        - ☆
+        - ☆☆
+        - ☆☆☆
+        - ☆☆☆☆
+        - ☆☆☆☆☆
     validations:
       required: true
 

@@ -16,7 +16,11 @@ body:
     id: task_detail
     attributes:
       label: タスク詳細
-      placeholder: タスクの詳細な内容を記載してください。
+      value: |
+        # As-is（現状）
+
+
+        # To-be（なりたい姿・解決後のイメージ）
     validations:
       required: false
 

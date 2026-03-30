@@ -4,48 +4,25 @@ title: "task title"
 labels: []
 assignees: []
 body:
-  - type: input
-    id: task_summary
-    attributes:
-      label: タスク概要
-      placeholder: タスクの内容を簡潔に記載してください。
-    validations:
-      required: true
-
   - type: textarea
     id: task_detail
     attributes:
       label: タスク詳細
       value: |
-        #### AsIs（現状）
+        ## Summary（タスク概要）
+        {-- タスク概要 の内容をこちらに記載 --}
+        
+        ## AsIs（現状）
+        {-- AsIs の内容をこちらに記載 --}
 
-        ##### ToBe（あるべき姿）
+        ## ToBe（あるべき姿）
+        {-- ToBy の内容をこちらに記載 --}
 
-        ##### Why（背景）
+        ## Why（背景）
+        {-- Why の内容をこちらに記載 --}
 
-        ##### 参考（リンク等）
+        ## 参考（リンク等）
+        {-- 参考 の内容をこちらに記載 --}
         
     validations:
-      required: false
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: 優先度
-      options:
-        - 保留
-        - ☆
-        - ☆☆
-        - ☆☆☆
-        - ☆☆☆☆
-        - ☆☆☆☆☆
-    validations:
-      required: false
-
-  - type: input
-    id: due_date
-    attributes:
-      label: 完了予定日
-      placeholder: "例: 2026-04-30"
-    validations:
-      required: false
+      required: true

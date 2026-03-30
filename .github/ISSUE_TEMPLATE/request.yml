@@ -5,18 +5,18 @@ labels: []
 assignees: []
 body:
   - type: input
-    id: request_summary
+    id: task_summary
     attributes:
-      label: タスク内容
-      placeholder: タスクの内容を簡潔に
+      label: タスク概要
+      placeholder: タスクの内容を簡潔に記載してください。
     validations:
       required: true
 
   - type: textarea
-    id: request_detail
+    id: task_detail
     attributes:
       label: タスク詳細
-      placeholder: タスクの詳細な内容を記載してください
+      placeholder: タスクの詳細な内容を記載してください。
     validations:
       required: false
 
@@ -32,7 +32,7 @@ body:
         - ☆☆☆☆
         - ☆☆☆☆☆
     validations:
-      required: true
+      required: false
 
   - type: input
     id: due_date

@@ -1,1 +1,7 @@
 blank_issues_enabled: false
+
+# Issue作成時のテンプレート設定
+defaults:
+  - template: "request.yml"
+    name: "✏ タスク作成"
+    about: "タスクを作成する"

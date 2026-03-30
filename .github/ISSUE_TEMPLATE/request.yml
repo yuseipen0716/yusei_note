@@ -17,10 +17,13 @@ body:
     attributes:
       label: タスク詳細
       value: |
-        # Asis
+        #### AsIs（現状）
 
+        ##### ToBe（あるべき姿）
 
-        # Tobe
+        ##### Why（背景）
+
+        ##### 参考（リンク等）
         
     validations:
       required: false

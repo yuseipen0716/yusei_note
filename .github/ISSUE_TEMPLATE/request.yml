@@ -17,10 +17,11 @@ body:
     attributes:
       label: タスク詳細
       value: |
-        # As-is（現状）
+        # Asis
 
 
-        # To-be（なりたい姿・解決後のイメージ）
+        # Tobe
+        
     validations:
       required: false
 

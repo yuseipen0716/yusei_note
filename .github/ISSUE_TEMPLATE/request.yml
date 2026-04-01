@@ -36,6 +36,7 @@ body:
     id: priority
     attributes:
       label: 優先度
+      description: ※ 佐藤さんの感覚値で設定する優先度です。エンジニア側の優先度判断用ではありませんので、基本的にエンジニアの方は入力不要です。
       options:
         - 保留
         - ☆
